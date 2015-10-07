@@ -1,4 +1,4 @@
-package main;
+package main.ru.javawebinar.webapp.model;
 
 import main.ru.javawebinar.webapp.model.ContactType;
 import main.ru.javawebinar.webapp.model.Section;
@@ -18,6 +18,7 @@ public class Main {
         Map<SectionType, Section> sections = new HashMap<>();
         contacts.put(ContactType.MOBILE, "063-621-52-02");
         contacts.put(ContactType.HOME_PHONE, "492-15-44");
+        sections.put()
 
 
         Resume res = new Resume("1", "Vlad", contacts, sections);
