@@ -4,7 +4,7 @@ package main.ru.javawebinar.webapp.model;
  * GKislin
  * 02.10.2015.
  */
-public class TextSection extends Section{
+public class TextSection extends Section {
     private final String content;
 
     public TextSection(String content) {

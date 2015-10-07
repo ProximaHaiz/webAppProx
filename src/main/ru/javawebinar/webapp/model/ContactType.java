@@ -1,6 +1,5 @@
 package main.ru.javawebinar.webapp.model;
 
-import java.io.Serializable;
 
 /**
  * GKislin
@@ -10,7 +9,7 @@ public enum ContactType {
     PHONE("Тел."),
     MOBILE("Мобильный"),
     HOME_PHONE("Домашний тел."),
-    SKYPE("Skype"){
+    SKYPE("Skype") {
         @Override
         public String toHtml(String value) {
             return "<a href='skype:" + value + "'>" + value + "</a>";
@@ -23,7 +22,6 @@ public enum ContactType {
         }
     },
     ICQ("ICQ");
-
     private String title;
 
     ContactType(String title) {

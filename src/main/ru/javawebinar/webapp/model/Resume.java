@@ -13,11 +13,13 @@ public class Resume {
     private final Map<ContactType, String> contacts;
     private final Map<SectionType, Section> sections;
 
-    public Resume(String fullName, Map<ContactType, String> contacts, Map<SectionType, Section> sections) {
+    public Resume(String fullName, Map<ContactType, String> contacts,
+                  Map<SectionType, Section> sections) {
         this(UUID.randomUUID().toString(), fullName, contacts, sections);
     }
 
-    public Resume(String uuid, String fullName, Map<ContactType, String> contacts, Map<SectionType, Section> sections) {
+    public Resume(String uuid, String fullName, Map<ContactType, String> contacts,
+                  Map<SectionType, Section> sections) {
         this.uuid = uuid;
         this.fullName = fullName;
         this.contacts = contacts;
@@ -67,5 +69,16 @@ public class Resume {
         result = 31 * result + contacts.hashCode();
         result = 31 * result + sections.hashCode();
         return result;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Resume{" +
+                "uuid='" + uuid + '\'' +
+                ", fullName='" + fullName + '\'' +
+                ", contacts=" + contacts +
+                ", sections=" + sections +
+                '}';
     }
 }
