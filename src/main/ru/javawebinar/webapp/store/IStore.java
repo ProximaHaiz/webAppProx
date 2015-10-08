@@ -15,7 +15,7 @@ public interface IStore {
 
     void update(Resume r);
 
-    Resume load(String uuid);
+    Resume load(String uuid)/*throws PersonalizationException*/;
 
     void delete(String uuid);
 

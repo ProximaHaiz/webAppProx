@@ -1,5 +1,7 @@
 package main.ru.javawebinar.webapp.model;
 
+import main.ru.javawebinar.webapp.model.main.Search;
+
 import java.time.LocalDate;
 import java.util.Collection;
 
@@ -124,10 +126,10 @@ public class Link {
     }
 
     public static class Organization {
-       private main.ru.javawebinar.webapp.model.main.Link homePage;
+       private Search homePage;
        private Collection<Position> periods;
 
-        public Organization(main.ru.javawebinar.webapp.model.main.Link homePage, Collection<Position> periods) {
+        public Organization(Search homePage, Collection<Position> periods) {
 
             this.homePage = homePage;
             this.periods = periods;
@@ -153,12 +155,12 @@ public class Link {
             return result;
         }
 
-        public main.ru.javawebinar.webapp.model.main.Link getHomePage() {
+        public Search getHomePage() {
 
             return homePage;
         }
 
-        public void setHomePage(main.ru.javawebinar.webapp.model.main.Link homePage) {
+        public void setHomePage(Search homePage) {
             this.homePage = homePage;
         }
 

@@ -11,15 +11,15 @@ public class Resume {
     private final String uuid;
     private final String fullName;
     private final Map<ContactType, String> contacts;
-    private final Map<SectionType, Section> sections;
+    private final Map<SectionType, /*Section*/String> sections;
 
     public Resume(String fullName, Map<ContactType, String> contacts,
-                  Map<SectionType, Section> sections) {
+                  Map<SectionType, /*Section*/ String > sections) {
         this(UUID.randomUUID().toString(), fullName, contacts, sections);
     }
 
     public Resume(String uuid, String fullName, Map<ContactType, String> contacts,
-                  Map<SectionType, Section> sections) {
+                  Map<SectionType, /*Section*/String  > sections) {
         this.uuid = uuid;
         this.fullName = fullName;
         this.contacts = contacts;
@@ -38,7 +38,7 @@ public class Resume {
         return contacts;
     }
 
-    public Map<SectionType, Section> getSections() {
+    public Map<SectionType, String /*Section*/> getSections() {
         return sections;
     }
 
